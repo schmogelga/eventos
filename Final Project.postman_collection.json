@@ -1,0 +1,344 @@
+{
+	"info": {
+		"_postman_id": "2d659897-2f3f-4dee-9a40-289344dae7cb",
+		"name": "Final Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "28544465",
+		"_collection_link": "https://cnj-pje-dbserver.postman.co/workspace/Team-Workspace~5e390319-b177-4f64-8805-ef74b29ff973/collection/28544465-2d659897-2f3f-4dee-9a40-289344dae7cb?action=share&source=collection_link&creator=28544465"
+	},
+	"item": [
+		{
+			"name": "eventosfull",
+			"item": [
+				{
+					"name": "eventos/{id}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8080/eventos/9659f664-a71a-442c-9307-5fe67d0b4940"
+					},
+					"response": []
+				},
+				{
+					"name": "eventos",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "d2672da167d4bb6e2072d5968f54abf9a1b969c7855b46f21127207cd2f3b6bc",
+								"type": "text"
+							},
+							{
+								"key": "Client",
+								"value": "eventos-api",
+								"type": "text"
+							}
+						],
+						"url": "localhost:8080/eventos"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "inscricoes-api",
+			"item": [
+				{
+					"name": "inscricoes",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"usuarioId\": \"{{usuarioId}}\",\r\n    \"eventoId\": \"{{eventoId}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8083/inscricoes"
+					},
+					"response": []
+				},
+				{
+					"name": "inscricoes/presenca",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"inscricaoId\": \"{{inscricaoId}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8083/inscricoes/presenca"
+					},
+					"response": []
+				},
+				{
+					"name": "inscricoes",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8083/inscricoes"
+					},
+					"response": []
+				},
+				{
+					"name": "inscricoes/{inscricaoId}",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8083/inscricoes/{{inscricaoId}}"
+					},
+					"response": []
+				},
+				{
+					"name": "inscricoes?usuarioId={{usuarioId}}",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8083/inscricoes?usuarioId={{usuarioId}}",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"inscricoes"
+							],
+							"query": [
+								{
+									"key": "usuarioId",
+									"value": "{{usuarioId}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "inscricoes/{idInscricao}",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8083/inscricoes/{{inscricaoId}}"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "eventos-api",
+			"item": [
+				{
+					"name": "eventos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8082/eventos"
+					},
+					"response": []
+				},
+				{
+					"name": "eventos/{id}",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8082/eventos/{{eventoId}}"
+					},
+					"response": []
+				},
+				{
+					"name": "eventos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Evento\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8082/eventos"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "auth/login",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": {
+								"password": "adminPassword",
+								"username": "admin"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"url": "localhost:8081/login"
+					},
+					"response": []
+				},
+				{
+					"name": "auth/validate",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8081/validate"
+					},
+					"response": []
+				},
+				{
+					"name": "auth/register",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcxMzA5NDEwNywiZXhwIjoxNzEzMTMwMTA3fQ.zaMmPMTWDgJtMq4qnm7BS80QNGeaHQBLsyjOF1ryCZM"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"user\",\r\n    \"password\": \"senha\",\r\n    \"email\": \"exemplo@email.com\",\r\n    \"nome\": \"Exemplo Nome\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8081/register"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "emails-api",
+			"item": [
+				{
+					"name": "emails",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"eventoId\": \"{{eventoId}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8084/emails"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
