@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+  # Posgresql
+  postgres:
+    image: postgres
+    volumes:
+      - postgres:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: Projeto
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+    ports:
+      - '5432:5432'
+
+volumes:
+  postgres:
+    driver: local

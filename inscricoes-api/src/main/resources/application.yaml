@@ -1,0 +1,20 @@
+server:
+    port: ${SERVER_PORT:8083}
+
+feign:
+    client:
+        config:
+            default:
+                connectTimeout: 60000
+                readTimeout: 10000
+    rest:
+        eventosfull:
+            name: eventosfull
+            url: http://localhost:8080
+            auth:
+                client: inscricoes-api
+                secret: "din2$#(34f&230*_DKLW"
+
+        auth:
+            name: auth
+            url: http://localhost:8081

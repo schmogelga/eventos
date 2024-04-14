@@ -1,0 +1,20 @@
+server:
+    port: ${SERVER_PORT:8084}
+
+feign:
+    client:
+        config:
+            default:
+                connectTimeout: 60000
+                readTimeout: 10000
+    rest:
+        eventosfull:
+            name: eventosfull
+            url: http://localhost:8080
+            auth:
+                client: emails-api
+                secret: "oi&c*3xs_23-D$@3sar04"
+
+        auth:
+            name: auth
+            url: http://localhost:8081
