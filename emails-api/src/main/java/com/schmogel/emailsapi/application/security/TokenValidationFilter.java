@@ -28,7 +28,7 @@ public class TokenValidationFilter implements Filter {
             servletRequest.setAttribute("username", username);
             chain.doFilter(request, response);
         } catch (FeignException ex) {
-            servletResponse.setStatus(ex.status());
+            servletResponse.setStatus(401);
         }
     }
 }
